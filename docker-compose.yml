@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: studylog-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: studylog
+      POSTGRES_USER: studylog
+      POSTGRES_PASSWORD: studylog
+    volumes:
+      - studylog_pgdata:/var/lib/postgresql/data
+
+volumes:
+  studylog_pgdata:
