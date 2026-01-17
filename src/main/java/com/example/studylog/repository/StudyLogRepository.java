@@ -1,4 +1,7 @@
 package com.example.studylog.repository;
 
-public class StudyLogRepository {
+import com.example.studylog.domain.StudyLog;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StudyLogRepository extends JpaRepository<StudyLog, Long> {
 }
